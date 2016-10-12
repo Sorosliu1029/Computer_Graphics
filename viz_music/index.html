@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Viz Music Demo</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <audio id="audioElement" src="test_music/soviet_march.mp3" ></audio>
-    <div>
-        <button onclick="document.getElementById('audioElement').play()">Play</button>
-        <button onclick="document.getElementById('audioElement').pause()">Pause</button>
-    </div>
+<audio id="audioElement" src="test_music/soviet_march.mp3"></audio>
+<div>
+    <button onclick="document.getElementById('audioElement').play()">Play</button>
+    <button onclick="document.getElementById('audioElement').pause()">Pause</button>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="viz_js/simple_style.js"></script>
 </body>
 </html>
