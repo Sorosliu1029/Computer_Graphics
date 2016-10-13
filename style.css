@@ -3,4 +3,11 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
+    text-align: center;
+}
+.viz_frame {
+    width: auto;
+    height: auto;
+    border-width: 10px;
+    border-color: black;
 }
