@@ -1,53 +1,35 @@
 /**
  * Created by SorosLiu on 16/10/13.
  */
-$(document).ready(function () {
-    var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    var audioElement = document.getElementById('audioElement');
-    var audioSrc = audioCtx.createMediaElementSource(audioElement);
-    var analyser = audioCtx.createAnalyser();
-
-    audioSrc.connect(analyser);
-    audioSrc.connect(audioCtx.destination);
-
-    var frequencyData = new Uint8Array(200);
-
-    var svgHeight = '300';
-    var svgWidth = '1200';
-    var barPadding = '1';
-
-    function createSvg(parent, height, width) {
-        return d3.select(parent).append('svg').attr('height', height).attr('width', width);
-    }
-
-    var svg = createSvg('body', svgHeight, svgWidth);
-
+function initialSVG(svg, data, para) {
+    var width = para.width;
+    var barPadding = para.barPadding;
     svg.selectAll('rect')
-        .data(frequencyData)
+        .data(data)
         .enter()
         .append('rect')
         .attr('x', function (d, i) {
-            return i * (svgWidth / frequencyData.length);
+            return i * (width / data.length);
         })
-        .attr('width', svgWidth / frequencyData.length - barPadding);
+        .attr('width', width / data.length - barPadding);
+}
 
-    function renderChart() {
-        requestAnimationFrame(renderChart);
+function updateSVG(analyser, data) {
+    analyser.getByteFrequencyData(data);
+    return data;
+}
 
-        analyser.getByteFrequencyData(frequencyData);
-
-        svg.selectAll('rect')
-            .data(frequencyData)
-            .attr('y', function (d) {
-                return svgHeight - d;
-            })
-            .attr('height', function (d) {
-                return d;
-            })
-            .attr('fill', function (d) {
-                return 'rgb(0, 0, ' + d + ')';
-            });
-    }
-
-    renderChart();
-});
+function renderSVG(svg, data, para) {
+    var height = para.height;
+    svg.selectAll('rect')
+        .data(data)
+        .attr('y', function (d) {
+            return height - d;
+        })
+        .attr('height', function (d) {
+            return d;
+        })
+        .attr('fill', function (d) {
+            return 'rgb(0, 0, ' + d + ')';
+        });
+}
