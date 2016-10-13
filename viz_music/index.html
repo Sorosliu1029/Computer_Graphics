@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Viz Music Demo</title>
-    <link rel="stylesheet" href="style.css"/>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
 <body>
 <audio id="audioElement">Oops, it seems your browser doesn't support audio label.</audio>
-<div>
+<h2 align="center">Music Visualization</h2>
+<h4 align="right">Powered by D3.js</h4>
+<div style="text-align: center">
     <input type="file" id="audioSource" onchange="onInputFileChange()">
     <button onclick="$('#audioElement').get(0).play()">Play</button>
     <button onclick="$('#audioElement').get(0).pause()">Pause</button>
