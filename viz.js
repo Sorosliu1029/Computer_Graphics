@@ -44,14 +44,18 @@ function renderFrame(parent, height, width, analyser, initFunc, updateFunc, rend
 }
 
 function main() {
-    // $.getScript('viz_js/simple_style.js');
-    renderFrame(
-        '#d1',
-        '300',
-        (getWindowWidth() * 0.8).toString(),
-        getAnalyser(),
-        initialSVG,
-        updateSVG,
-        renderSVG
-    )
+    var framesFuncsArray = [bar_time_domain, bar_frequency_domain];
+    var analyser = getAnalyser();
+    var width = (getWindowWidth() * 0.9).toString();
+    for (var i = 0; i < framesFuncsArray.length; i++) {
+        renderFrame(
+            '#d' + i.toString(),
+            '300',
+            width,
+            analyser,
+            framesFuncsArray[i].init,
+            framesFuncsArray[i].update,
+            framesFuncsArray[i].render
+        )
+    }
 }

@@ -15,7 +15,8 @@ function initialSVG(svg, data, para) {
 }
 
 function updateSVG(analyser, data) {
-    analyser.getByteFrequencyData(data);
+    // use time domain data as visualization source
+    analyser.getByteTimeDomainData(data);
     return data;
 }
 
@@ -33,3 +34,9 @@ function renderSVG(svg, data, para) {
             return 'rgb(0, 0, ' + d + ')';
         });
 }
+
+var bar_time_domain = {
+    'init': initialSVG,
+    'update': updateSVG,
+    'render': renderSVG
+};
