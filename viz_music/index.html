@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <title>Viz Music Demo</title>
     <link rel="stylesheet" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
 <body>
-<audio id="audioElement" src="test_music/soviet_march.mp3"></audio>
+<audio id="audioElement">Oops, it seems your browser doesn't support audio label.</audio>
 <div>
-    <button onclick="document.getElementById('audioElement').play()">Play</button>
-    <button onclick="document.getElementById('audioElement').pause()">Pause</button>
+    <input type="file" id="audioSource" onchange="onInputFileChange()">
+    <button onclick="$('#audioElement').get(0).play()">Play</button>
+    <button onclick="$('#audioElement').get(0).pause()">Pause</button>
 </div>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="viz_js/simple_style.js"></script>
+<script src="upload_file.js"></script>
 </body>
 </html>
