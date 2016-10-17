@@ -43,6 +43,44 @@ function renderFrame(parent, height, width, analyser, initFunc, updateFunc, rend
     renderChart();
 }
 
+function _byte2Hex(n)
+{
+    var nybHexString = "0123456789ABCDEF";
+    return String(nybHexString.substr((n >> 4) & 0x0F,1)) + nybHexString.substr(n & 0x0F,1);
+}
+
+function _RGB2Color(r,g,b)
+{
+    return '#' + _byte2Hex(r) + _byte2Hex(g) + _byte2Hex(b);
+}
+
+function makeColorGradient(i, frequency1, frequency2, frequency3,
+                           phase1, phase2, phase3,
+                           center, width)
+{
+    if (frequency1 == undefined)
+        frequency1 = 0.1;
+    if (frequency2 == undefined)
+        frequency2 = 0.1;
+    if (frequency3 == undefined)
+        frequency3 = 0.1;
+    if (phase1 == undefined)
+        phase1 = 0;
+    if (phase2 == undefined)
+        phase2 = 2;
+    if (phase3 == undefined)
+        phase3 = 4;
+    if (center == undefined)
+        center = 200;
+    if (width == undefined)
+        width = 55;
+
+    var red = Math.sin(frequency1*i + phase1) * width + center;
+    var grn = Math.sin(frequency2*i + phase2) * width + center;
+    var blu = Math.sin(frequency3*i + phase3) * width + center;
+    return _RGB2Color(red,grn,blu);
+}
+
 function main() {
     var framesFuncsArray = [bar_time_domain, bar_frequency_domain];
     var analyser = getAnalyser();

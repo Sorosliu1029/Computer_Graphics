@@ -30,8 +30,8 @@ function renderSVG(svg, data, para) {
         .attr('height', function (d) {
             return d;
         })
-        .attr('fill', function (d) {
-            return 'rgb(0, 0, ' + d + ')';
+        .attr('fill', function (d, i) {
+            return makeColorGradient(i);
         });
 }
 
