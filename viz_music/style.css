@@ -8,6 +8,13 @@
 .viz_frame {
     width: auto;
     height: auto;
-    border-width: 10px;
-    border-color: black;
+    border: 10px black;
+}
+.viz_frame_split {
+    width: 50%;
+    height: auto;
+    border: 10px black;
+    display: block;
+    float: left;
+    text-align: center;
 }
