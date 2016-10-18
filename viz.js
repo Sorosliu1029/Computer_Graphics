@@ -82,7 +82,7 @@ function makeColorGradient(i, frequency1, frequency2, frequency3,
 }
 
 function main() {
-    var framesFuncsArray = [bar_time_domain, bar_frequency_domain];
+    var framesFuncsArray = [bar_time_domain, bar_frequency_domain, grid_frequency_domain];
     var analyser = getAnalyser();
     var width_long = getWindowWidth() * 0.9;
     var width_short = width_long * 0.5;
