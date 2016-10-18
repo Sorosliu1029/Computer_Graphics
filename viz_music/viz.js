@@ -81,11 +81,17 @@ function makeColorGradient(i, frequency1, frequency2, frequency3,
     return _RGB2Color(red,grn,blu);
 }
 
+function makeColorGrid(value) {
+    var colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"];
+    return colors[Math.floor(value / 32)];
+}
+
 function main() {
     var framesFuncsArray = [bar_time_domain, bar_frequency_domain, grid_frequency_domain];
     var analyser = getAnalyser();
     var width_long = getWindowWidth() * 0.9;
     var width_short = width_long * 0.5;
+
     for (var i = 0; i < framesFuncsArray.length; i++) {
         renderFrame(
             '#d' + i.toString(),

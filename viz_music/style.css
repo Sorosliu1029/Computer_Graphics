@@ -6,15 +6,16 @@
     text-align: center;
 }
 .viz_frame {
+    display: block;
     width: auto;
     height: auto;
-    border: 10px black;
+    margin: 20px auto;
 }
 .viz_frame_split {
     width: 50%;
     height: auto;
-    border: 10px black;
     display: block;
     float: left;
     text-align: center;
+    margin: 20px auto;
 }
