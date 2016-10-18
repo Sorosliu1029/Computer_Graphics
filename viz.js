@@ -84,12 +84,13 @@ function makeColorGradient(i, frequency1, frequency2, frequency3,
 function main() {
     var framesFuncsArray = [bar_time_domain, bar_frequency_domain];
     var analyser = getAnalyser();
-    var width = (getWindowWidth() * 0.9).toString();
+    var width_long = getWindowWidth() * 0.9;
+    var width_short = width_long * 0.5;
     for (var i = 0; i < framesFuncsArray.length; i++) {
         renderFrame(
             '#d' + i.toString(),
             '300',
-            width,
+            i < 2 ? width_short.toString() : width_long.toString(),
             analyser,
             framesFuncsArray[i].init,
             framesFuncsArray[i].update,
