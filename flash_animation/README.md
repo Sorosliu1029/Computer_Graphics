@@ -10,7 +10,7 @@
 
 利用逆向移动地面，产生火柴人和地面之间的相对移动，模拟火柴人走动的效果。
 
-参考：
+#### 参考：
 
 [How To Create A Walking Stickman In Adobe Flash Using Bone Tool](http://www.aov.co/blog?b=2014/05/how-to-create-a-walking-stickman-adobe-flash-using-bone-tool/)
 
