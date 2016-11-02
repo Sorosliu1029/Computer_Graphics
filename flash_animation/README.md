@@ -2,6 +2,8 @@
 
 ---
 
+ ![stickman](stickman.gif)
+
 #### 说明：
 
 该火柴人的Flash动画使用[Adobe Flash Professional CS6](http://www.adobe.com/cn/products/cs6/flash.html) 创作。
