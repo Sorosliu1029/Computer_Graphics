@@ -4,6 +4,8 @@
 
 Course Project Repository
 
+[Online demo for some projects](https://sorosliu1029.github.io/Computer_Graphics/)
+
 This repo contains all projects for this course, including:
 
 - Viz Music
@@ -12,3 +14,5 @@ This repo contains all projects for this course, including:
 - Flash Animation
 - English Graphics Paper Translation
 - (Maybe) Class Discussion Material
+
+Feel free to comment~
