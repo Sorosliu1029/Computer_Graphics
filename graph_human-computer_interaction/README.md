@@ -4,7 +4,7 @@
 
 ### 使用说明：
 
-程序可在线运行，访问地址为：TODO
+程序可在线运行，访问地址为：[Human-Computer Interaction for Figures](https://sorosliu1029.github.io/Computer_Graphics/graph_human-computer_interaction/hci.html)
 
 可以在网页上拖拽移动两个圆形。
 
