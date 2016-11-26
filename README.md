@@ -1,7 +1,5 @@
 # Computer Graphics
 
----
-
 Course Project Repository
 
 [Online demo for some projects](https://sorosliu1029.github.io/Computer_Graphics/)
