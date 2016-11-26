@@ -13,6 +13,5 @@ This repo contains all projects for this course, including:
 - Photorealistic Static Scenery
 - Flash Animation
 - English Graphics Paper Translation
-- (Maybe) Class Discussion Material
 
 Feel free to comment~
